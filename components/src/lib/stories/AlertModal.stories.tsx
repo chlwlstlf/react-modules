@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { AlertModal } from "chlwlstlf-modal";
+import AlertModal from "../AlertModal/AlertModal";
 import { fn } from "@storybook/test";
 
 const meta = {

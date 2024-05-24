@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ConfirmModal } from "chlwlstlf-modal";
+import ConfirmModal from "../ConfirmModal/ConfirmModal";
 import { fn } from "@storybook/test";
 
 const meta = {
