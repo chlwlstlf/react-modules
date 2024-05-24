@@ -2,8 +2,6 @@ import { Modal } from "..";
 import { ModalMainProps } from "../type/modal.type";
 
 export interface PromptModalProps extends ModalMainProps {
-  onSubmit: () => void;
-  onCancel: () => void;
   title: string;
   submitButtonText?: string;
   cancelButtonText?: string;
@@ -11,7 +9,7 @@ export interface PromptModalProps extends ModalMainProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const PromptModal = ({ onSubmit, onCancel, title, submitButtonText = "확인", cancelButtonText = "취소", value, onChange, ...rest }: PromptModalProps) => {
+const PromptModal = ({ title, submitButtonText = "확인", cancelButtonText = "취소", value, onChange, ...rest }: PromptModalProps) => {
   return (
     <Modal {...rest}>
       <Modal.Header>
@@ -26,14 +24,14 @@ const PromptModal = ({ onSubmit, onCancel, title, submitButtonText = "확인", c
       <Modal.Footer>
         <Modal.Button
           size="small"
-          onClick={onSubmit}
+          onClick={rest.onSubmit}
         >
           {submitButtonText}
         </Modal.Button>
         <Modal.Button
           variant="secondary"
           size="small"
-          onClick={onCancel}
+          onClick={rest.onCancel}
         >
           {cancelButtonText}
         </Modal.Button>

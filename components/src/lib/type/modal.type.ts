@@ -11,6 +11,9 @@ export type ButtonSize = "small" | "large";
 export interface ModalMainProps extends HTMLAttributes<HTMLElement> {
   isOpen: boolean;
   onClose: () => void;
+  onConfirm: () => void;
+  onCancel: () => void;
+  onSubmit: () => void;
   size?: Size;
   position?: Position;
   className?: string;
